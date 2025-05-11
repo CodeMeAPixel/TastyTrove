@@ -36,7 +36,7 @@ export default async function Home({ searchParams }: HomeProps) {
           className='flex gap-1 px-4 py-2 text-sm font-bold tabular-nums md:text-base'
           variant='outline'
         >
-          More than <CounterUp count={recipes.length} /> recipes
+          <CounterUp count={recipes.length} /> recipes available
         </Badge>
         <Balancer
           as='h1'
@@ -74,34 +74,6 @@ export default async function Home({ searchParams }: HomeProps) {
       </section>
 
       <RecipesSection sortOptions={sortOptions} recipes={recipes} />
-
-      {/* <section className='flex flex-col items-center justify-center gap-4 py-8 md:py-12 lg:py-16'>
-        <h3 className='text-center text-3xl font-bold'>
-          Top Comments (Coming Soon)
-        </h3>
-
-        <div className='flex flex-col items-center justify-center gap-4'>
-          <Construction className='h-36 w-36 text-muted-foreground' />
-        </div>
-      </section>
-      <section className='flex flex-col items-center justify-center gap-4 py-8 md:py-12 lg:py-16'>
-        <h3 className='text-center text-3xl font-bold'>
-          Our Blog (Coming Soon)
-        </h3>
-
-        <div>
-          <Construction className='h-36 w-36 text-muted-foreground' />
-        </div>
-      </section>
-      <section className='flex flex-col items-center justify-center gap-4 py-8 md:py-12 lg:py-16'>
-        <h3 className='text-center text-3xl font-bold'>
-          Gallery (Coming Soon)
-        </h3>
-
-
-
-        <Construction className='h-36 w-36 text-muted-foreground' />
-      </section> */}
     </Shell>
   )
 }

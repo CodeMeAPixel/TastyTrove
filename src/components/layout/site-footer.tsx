@@ -10,7 +10,7 @@ import { buttonVariants } from '../ui/button'
 
 const SiteFooter = () => {
   return (
-    <footer className='bg-background w-full border-t h-fit'>
+    <footer className='bg-background w-full border-t h-fit mt-10'>
       <Shell>
         <section
           id='footer-bottom'
