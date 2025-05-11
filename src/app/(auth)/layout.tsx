@@ -22,21 +22,14 @@ export default function AuthLayout({ children }: React.PropsWithChildren) {
           href='/'
           className='absolute top-6 left-8 z-20 flex items-center text-lg font-bold tracking-tight'
         >
-          <PizzaIcon className='mr-2 size-6' aria-hidden='true' />
-          <span>{siteConfig.name}</span>
+          🤤
+          <span className="ml-1">{siteConfig.name}</span>
         </Link>
         <div className='absolute bottom-6 left-8 z-20 line-clamp-1 text-base'>
-          Photo by{' '}
-          <Link
-            href='https://unsplash.com/@miracletwentyone'
-            className='hover:underline'
-          >
-            Joseph Gonzalez
-          </Link>
-          {' on '}
-          <Link href='https://unsplash.com/' className='hover:underline'>
-            Unsplash
-          </Link>
+          <p className='max-w-sm text-sm font-medium text-muted-foreground md:max-w-md lg:max-w-lg'>
+            A recipe is soulless. The essence of the recipe must come from you,
+            the cook.
+          </p>
         </div>
       </AspectRatio>
       <main className='absolute top-1/2 col-span-1 container flex -translate-y-1/2 items-center md:static md:top-0 md:col-span-2 md:flex md:translate-y-0 lg:col-span-1'>

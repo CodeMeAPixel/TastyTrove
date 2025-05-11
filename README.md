@@ -1,84 +1,128 @@
-# Recipely - Modern Recipe Web App
+# Tasty Trove 🍽️ – Modern Recipe Sharing Platform
 
-![Recipely Logo](https://media.licdn.com/dms/image/v2/D4D2DAQHSSk_O88mKLw/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1713987054221?e=1745892000&v=beta&t=MeY5D_bqMa3LcdTRNPUkmjqTWKog_La00Qj6E2bXwqc)  
-**Live Demo**: [recipely-food.vercel.app](https://recipely-food.vercel.app)
+![Tasty Trove Logo](./public/logo.png)
 
-## 🍳 Features
+**Live Demo:** [tasty-trove-psi.vercel.app](https://tasty-trove-psi.vercel.app)
 
-- Explore thousands of recipes with beautiful visuals
-- Advanced search with filters (diet, cook time, difficulty)
-- Save favorites and create collections
-- Responsive design (mobile, tablet & desktop)
-- Dark/light mode support
-- Upload your own recipes with images
+---
+
+## ✨ What is Tasty Trove?
+
+**Tasty Trove** is a modern, community-driven platform for discovering, uploading, and sharing recipes. Whether you're a home cook, a professional chef, or just looking for inspiration, Tasty Trove is your go-to destination for delicious ideas.
+
+---
+
+## 🚩 Features
+
+- 🥗 **Browse** a curated collection of recipes by category, difficulty, or prep time
+- 📤 **Upload** your own recipes with images, detailed steps, and ingredient lists
+- 💾 **Save** your favorite recipes and create your own collections
+- ⭐ **Review** and rate recipes from the community
+- 🌗 **Responsive** design with dark/light mode support
+- 📱 **Mobile-first** experience
+- 🔍 **Advanced search** with filters (diet, cook time, difficulty)
+- 🖼️ **Image uploads** for recipes
+- 🛡️ **Secure authentication** (Clerk)
+- 🗨️ **Community**: Connect via Discord and Twitter
+
+---
 
 ## 🛠️ Tech Stack
 
 ### Frontend
 
-- **Next.js 15**
+- **Next.js 15** (App Router, Partial Prerendering)
 - **React 19**
 - **TypeScript**
-- **Zod**
 - **Tailwind CSS v4**
-- **shadcn/ui**
-- **Radix UI**
-- **Uploadthing**
+- **shadcn/ui** & **Radix UI**
+- **Zod** (validation)
+- **Uploadthing** (image uploads)
 
 ### Backend
 
-- **Drizzle ORM** – TypeScript-first SQL query builder
-- **PostgreSQL** – Relational database for recipes/user data
+- **Drizzle ORM** (TypeScript-first SQL query builder)
+- **PostgreSQL** (relational database)
 
-### Deployment
+### Auth & Deployment
 
-- **Vercel** – Edge Network, Serverless Functions
+- **Clerk** (authentication)
+- **Vercel** (Edge Network, Serverless Functions)
 
-## 🚀 Local Setup
+---
 
-1. Clone the repo:
+## 🚀 Getting Started
 
-```bash
-git clone https://github.com/JorgeAssaf/recipely-food.git
-```
+1. **Clone the repo:**
+   ```bash
+   git clone https://github.com/CodeMeAPixel/tastytrove.git
+   cd tastytrove
+   ```
 
-2. Install dependencies:
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-```bash
-npm install
-```
+3. **Configure environment variables (`.env.local`):**
+   ```env
+   DATABASE_URL_MYSQL=
+   DATABASE_URL=
+   UPLOADTHING_URL=
+   UPLOADTHING_SECRET=
+   UPLOADTHING_APP_ID=
+   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+   CLERK_SECRET_KEY=
+   NEXT_PUBLIC_APP_URL=
+   UPLOADTHING_TOKEN=
+   ```
 
-3. Configure environment variables (create `.env.local`):
+4. **Run the dev server:**
+   ```bash
+   npm run dev
+   ```
 
-```env
-DATABASE_URL_MYSQL
-DATABASE_URL
-UPLOADTHING_URL
-UPLOADTHING_SECRET
-UPLOADTHING_APP_ID
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
-CLERK_SECRET_KEY
-NEXT_PUBLIC_APP_URL
-UPLOADTHING_TOKEN
-```
+---
 
-4. Run the dev server:
+## 📝 Recipe Submission Guidelines
 
-```bash
-npm run dev
-```
+- **Steps:** Use new lines or hyphens (`-`) to separate each step. You can make text bold with `**double asterisks**`.
+- **Ingredients:** List each ingredient with quantity and units (e.g., `2 cups of flour`).
+- **Images:** Upload up to 3 images per recipe.
+- **Need help?** See the [FAQs & Recipe Guide](https://tasty-trove-psi.vercel.app/faqs).
 
-## 🌟 Why This Stack?
+---
 
-- **Next.js 15** enables partial prerendering for optimal performance
-- **Drizzle + PostgreSQL** provides full type safety from database to UI
-- **Uploadthing** makes file/image uploads simple and secure
-- **shadcn/ui** offers beautiful, accessible components without CSS bloat
-- **Tailwind v4** leverages CSS-native variables for theming
+## 🌟 Why Tasty Trove?
 
-In future versions, we plan to:
+- **Modern stack:** Next.js 15, Drizzle, PostgreSQL, Tailwind, shadcn/ui
+- **Type safety:** End-to-end types from DB to UI
+- **Beautiful UI:** Accessible, customizable, and responsive
+- **Community-first:** Built for sharing and discovery
 
-- Integrate Nuqs for improved URL parameter and query string management
-- Redesign all project pages with a more modern and intuitive interface
-- Introduce advanced search filters (such as cuisine type and specific ingredients)
-- Implement email notifications for users (e.g., recipe updates, favorites)
+---
+
+## 📬 Feedback & Community
+
+- [Discord](https://discord.gg/Vv2bdC44Ge)
+- [Twitter](https://twitter.com/CodeMeAPixel)
+- [GitHub Issues](https://github.com/CodeMeAPixel/tastytrove/issues)
+
+---
+
+## 👨‍💻 Credits
+
+Built by [Jorge Assaf](https://codemeapixel.dev/) and ByteBrush Studios.
+
+---
+
+## 📅 Roadmap
+
+- [ ] Advanced search filters (cuisine, ingredients)
+- [ ] Email notifications for favorites & updates
+- [ ] More social/community features
+- [ ] Improved recipe analytics
+
+---
+
+Enjoy cooking and sharing with **Tasty Trove**! 🍲

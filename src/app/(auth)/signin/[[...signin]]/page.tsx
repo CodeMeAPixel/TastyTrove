@@ -29,7 +29,7 @@ export default async function SigninPage() {
     <Shell className='max-w-lg'>
       <Card>
         <CardHeader className='space-y-1'>
-          <CardTitle className='text-2xl'>Welcome back to recipely!</CardTitle>
+          <CardTitle className='text-2xl'>Welcome back!</CardTitle>
           <CardDescription>Sign in to your account to continue</CardDescription>
         </CardHeader>
         <CardContent className='grid gap-4'>

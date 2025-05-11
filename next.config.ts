@@ -16,7 +16,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'qq9k04yhfp.ufs.sh',
+        hostname: 'gen915tyxw.ufs.sh',
         port: '',
       },
     ],

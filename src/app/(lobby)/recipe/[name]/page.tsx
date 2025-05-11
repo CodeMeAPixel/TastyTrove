@@ -57,7 +57,7 @@ interface RecipePageProps {
 
 export default async function RecipePage({ params }: RecipePageProps) {
   const { name } = await params
-  const recipeName = slugify(name)
+  const recipeName = deslugify(name)
   const recipe = await db.query.recipes.findFirst({
     where: (recipes, { eq }) => eq(recipes.name, recipeName),
   })
@@ -173,9 +173,29 @@ export default async function RecipePage({ params }: RecipePageProps) {
                     {recipe.steps?.length ? (
                       <div className='flex flex-col space-y-2 text-lg'>
                         <ol className='flex flex-col flex-wrap gap-2'>
-                          <li className='list-inside list-decimal'>
-                            {recipe.steps}
-                          </li>
+                          {(
+                            typeof recipe.steps === 'string'
+                              ? recipe.steps
+                                  .split(/\r?\n|^\s*-\s+/gm)
+                                  .map(s => s.trim())
+                                  .filter(Boolean)
+                              : []
+                          ).map((step, idx) => (
+                            <li key={idx} className='list-inside list-decimal'>
+                              {
+                                // Replace **text** with <strong>text</strong>
+                                step.split(/(\*\*[^\*]+\*\*)/g).map((part, i) =>
+                                  part.startsWith('**') && part.endsWith('**') ? (
+                                    <strong key={i}>
+                                      {part.slice(2, -2)}
+                                    </strong>
+                                  ) : (
+                                    <span key={i}>{part}</span>
+                                  )
+                                )
+                              }
+                            </li>
+                          ))}
                         </ol>
                       </div>
                     ) : null}

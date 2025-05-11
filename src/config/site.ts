@@ -8,14 +8,26 @@ import { recipesCategories } from './recipes'
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: 'Recipely',
+  name: 'Tasty Trove',
   description: 'A platform to create, view and share recipes',
   url: process.env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:3000',
-  sourceCode: 'https://github.com/JorgeAssaf/recipely-food',
+  sourceCode: 'https://github.com/CodeMeAPixel/TastyTrove',
+  discordUrl: 'https://discord.gg/Vv2bdC44Ge',
+  twitterUrl: 'https://twitter.com/CodeMeAPixel',
   MainNavItem: [
     {
       title: 'Home',
       href: '/',
+    },
+    {
+      title: 'About',
+      href: '/about',
+      disabled: false,
+    },
+    {
+      title: 'Blog',
+      href: '/blog',
+      disabled: false,
     },
     {
       title: 'Recipes',
@@ -39,16 +51,10 @@ export const siteConfig = {
         })),
       ],
     },
-
     {
-      title: 'About',
-      href: '/about',
-      disabled: true,
-    },
-    {
-      title: 'Blog',
-      href: '/blog',
-      disabled: true,
+      title: 'FAQs',
+      href: '/faqs',
+      disabled: false,
     },
   ] satisfies MainNavItem[],
 
@@ -85,17 +91,17 @@ export const siteConfig = {
       items: [
         {
           title: 'Twitter',
-          href: 'https://twitter.com/AssafEnrique',
+          href: 'https://twitter.com/CodeMeAPixel',
           external: true,
         },
         {
           title: 'GitHub',
-          href: 'https://github.com/JorgeAssaf',
+          href: 'https://github.com/CodeMeAPixel',
           external: true,
         },
         {
           title: 'LinkedIn',
-          href: 'https://www.linkedin.com/in/jorge-enrique-assaf/',
+          href: 'https://www.linkedin.com/in/CodeMeAPixel',
           external: true,
         },
       ],

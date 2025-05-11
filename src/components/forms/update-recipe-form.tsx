@@ -129,6 +129,33 @@ const UpdateRecipeForm = ({ recipe }: AddNewRecipeProps) => {
 
   return (
     <>
+      <div className="mb-6">
+        <div className="flex items-center gap-2 rounded-lg bg-blue-50 px-4 py-3 text-blue-900 dark:bg-blue-950 dark:text-blue-100 border border-blue-200 dark:border-blue-800">
+          <svg
+            className="h-5 w-5 text-blue-400 shrink-0"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" />
+            <path stroke="currentColor" strokeWidth="2" d="M12 8v4m0 4h.01" />
+          </svg>
+          <span>
+            Need help? See our{' '}
+            <a
+              href="/faqs"
+              className="underline hover:text-pink-accent font-semibold"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              FAQs & Recipe Guide
+            </a>
+            .
+          </span>
+        </div>
+      </div>
       <Form {...form}>
         <form
           className='grid w-full max-w-2xl gap-5'
@@ -342,13 +369,13 @@ const UpdateRecipeForm = ({ recipe }: AddNewRecipeProps) => {
 
           <FormItem className='w-full'>
             <FormLabel className={cn('text-primary')}>
-              Prep Time <FormDescription>(in minutes)</FormDescription>
+              Prep/Cook Time <FormDescription>(in minutes)</FormDescription>
             </FormLabel>
             <FormControl>
               <Input
                 type='number'
                 inputMode='numeric'
-                placeholder='How long does it take to prepare the product?'
+                placeholder='How long does it take to prepare and/or cook the product?'
                 {...form.register('prepTime', { valueAsNumber: true })}
               />
             </FormControl>

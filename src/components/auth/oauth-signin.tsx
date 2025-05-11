@@ -11,7 +11,7 @@ import { Icons } from '../icons'
 import { Button } from '../ui/button'
 
 const oauthProviders = [
-  { name: 'Google', strategy: 'oauth_google', icon: 'google' },
+  { name: 'Discord', strategy: 'oauth_discord', icon: 'discord' },
   { name: 'GitHub', strategy: 'oauth_github', icon: 'gitHub' },
 ] satisfies {
   name: string

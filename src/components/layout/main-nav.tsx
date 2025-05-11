@@ -1,8 +1,9 @@
 'use client'
 
-import { forwardRef, type FC } from 'react'
 import Link from 'next/link'
+import { forwardRef, type FC } from 'react'
 import { Pizza } from 'lucide-react'
+import Image from 'next/image'
 
 import type { MainNavItem } from '@/types/nav'
 import { siteConfig } from '@/config/site'
@@ -29,9 +30,9 @@ export const MainNav: FC<MainNavProps> = ({ items }) => {
         href='/'
         className='hidden items-center space-x-2 lg:flex'
       >
-        <Pizza className='size-6' aria-hidden='true' />
-        <span className='hidden font-bold lg:inline-block'>
-          {siteConfig.name}
+        <Image src='/logo.png' alt='Logo' width={32} height={32} className='h-8 w-8 rounded-full' />
+        <span className='hidden font-bold lg:inline-block ml-1'>
+          {" "}{siteConfig.name}
         </span>
       </Link>
       <NavigationMenu>

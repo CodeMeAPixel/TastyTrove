@@ -1,8 +1,8 @@
 {
-  "name": "recipely-food",
+  "name": "@codemeapixel/tastytrove",
   "version": "1.0.0",
   "description": "A recipe app for food lovers",
-  "author": "Jorge Enrique Assaf",
+  "author": "CodeMeAPixel",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -13,10 +13,10 @@
     "format": "prettier --write .",
     "lint:fix": "next lint --fix",
     "clean": "rm -rf .next && rm -rf node_modules",
-    "db:push": "drizzle-kit push:mysql",
+    "db:push": "drizzle-kit push",
     "db:introspect": "drizzle-kit introspect:mysql",
     "db:studio": "drizzle-kit studio --port 5000 --verbose",
-    "unlighthouse": "pnpm dlx unlighthouse --site https://recipely-food.vercel.app/ --desktop --no-cache"
+    "unlighthouse": "pnpm dlx unlighthouse --site https://tasty-trove-psi.vercel.app/ --desktop --no-cache"
   },
   "dependencies": {
     "@clerk/nextjs": "6.16.0",
@@ -56,6 +56,7 @@
     "react-advanced-cropper": "0.20.1",
     "react-day-picker": "9.6.7",
     "react-dom": "19.1.0",
+    "react-icons": "^5.4.0",
     "react-dropzone": "14.3.8",
     "react-hook-form": "7.55.0",
     "react-medium-image-zoom": "5.2.14",

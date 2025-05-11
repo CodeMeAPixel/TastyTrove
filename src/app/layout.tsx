@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     'typeScript',
     'shadcn',
     'radix ui',
-    'jorge assaf',
+    'codemeapixel',
     'recipes',
     'cooking',
     'food',
@@ -37,11 +37,11 @@ export const metadata: Metadata = {
   ],
   authors: [
     {
-      name: 'Jorge Assaf',
-      url: 'https://jorgeassaf.vercel.app',
+      name: 'Tyler Hodgkin',
+      url: 'https://codemeapixel.dev',
     },
   ],
-  creator: 'Jorge Assaf',
+  creator: 'Tyler Hodgkin',
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     images: [`${siteConfig.url}/opengraph-image.png`],
-    creator: '@AssafEnrique',
+    creator: '@CodeMeAPixel',
   },
 }
 export const viewport: Viewport = {
