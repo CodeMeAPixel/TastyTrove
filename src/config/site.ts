@@ -20,16 +20,6 @@ export const siteConfig = {
       href: '/',
     },
     {
-      title: 'About',
-      href: '/about',
-      disabled: false,
-    },
-    {
-      title: 'Blog',
-      href: '/blog',
-      disabled: false,
-    },
-    {
       title: 'Recipes',
       href: '/recipes',
     },
@@ -50,12 +40,7 @@ export const siteConfig = {
           items: [],
         })),
       ],
-    },
-    {
-      title: 'FAQs',
-      href: '/faqs',
-      disabled: false,
-    },
+    }
   ] satisfies MainNavItem[],
 
   recipeNav: recipes.category.enumValues.map((category) => ({
