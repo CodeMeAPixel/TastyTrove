@@ -1,7 +1,5 @@
 # Tasty Trove 🍽️ – Modern Recipe Sharing Platform
 
-![Tasty Trove Logo](./public/logo.png)
-
 **Live Demo:** [tasty-trove-psi.vercel.app](https://tasty-trove-psi.vercel.app)
 
 ---
