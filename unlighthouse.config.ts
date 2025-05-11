@@ -15,7 +15,7 @@ const config = {
   hooks: {
     async authenticate(page: Page) {
       // login to the page
-      await page.goto('https://recipely-food.vercel.app/signin', {
+      await page.goto('https://recipes.codemeapixel.dev/signin', {
         waitUntil: 'networkidle0',
       })
       const emailInput = await page.$('input[type="text"]')

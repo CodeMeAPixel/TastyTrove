@@ -51,39 +51,6 @@
 
 ---
 
-## 🚀 Getting Started
-
-1. **Clone the repo:**
-   ```bash
-   git clone https://github.com/CodeMeAPixel/tastytrove.git
-   cd tastytrove
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-
-3. **Configure environment variables (`.env.local`):**
-   ```env
-   DATABASE_URL_MYSQL=
-   DATABASE_URL=
-   UPLOADTHING_URL=
-   UPLOADTHING_SECRET=
-   UPLOADTHING_APP_ID=
-   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-   CLERK_SECRET_KEY=
-   NEXT_PUBLIC_APP_URL=
-   UPLOADTHING_TOKEN=
-   ```
-
-4. **Run the dev server:**
-   ```bash
-   npm run dev
-   ```
-
----
-
 ## 📝 Recipe Submission Guidelines
 
 - **Steps:** Use new lines or hyphens (`-`) to separate each step. You can make text bold with `**double asterisks**`.
@@ -112,7 +79,7 @@
 
 ## 👨‍💻 Credits
 
-Built by [Jorge Assaf](https://codemeapixel.dev/) and ByteBrush Studios.
+Built by [Pixelated](https://codemeapixel.dev/) and ByteBrush Studios.
 
 ---
 
