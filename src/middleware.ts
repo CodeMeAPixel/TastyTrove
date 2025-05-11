@@ -46,7 +46,8 @@ export default clerkMiddleware(
     authorizedParties: [
       'http://localhost:3000',
       'https://recipes.codemeapixel.dev',
-      'https://tasty-trove-psi.vercel.app'
+      'https://tasty-trove-psi.vercel.app',
+      'https://tastytrove.ca'
     ],
   },
 )

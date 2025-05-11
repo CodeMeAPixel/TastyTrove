@@ -16,7 +16,10 @@
     "db:push": "drizzle-kit push",
     "db:introspect": "drizzle-kit introspect:mysql",
     "db:studio": "drizzle-kit studio --port 5000 --verbose",
-    "unlighthouse": "pnpm dlx unlighthouse --site https://tasty-trove-psi.vercel.app/ --desktop --no-cache"
+    "unlighthouse": "pnpm dlx unlighthouse --site https://tasty-trove-psi.vercel.app/ --desktop --no-cache",
+    "generate": "drizzle-kit generate:pg",
+    "migrate": "bun run drizzle/migrate.ts",
+    "studio": "drizzle-kit studio"
   },
   "dependencies": {
     "@clerk/nextjs": "6.16.0",

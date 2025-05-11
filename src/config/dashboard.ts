@@ -25,6 +25,14 @@ export const dashboardConfig: DashboardConfig = {
         },
 
         {
+          title: 'Cookbooks',
+          href: '/dashboard/cookbooks/my-cookbooks',
+          icon: 'book',
+          disabled: true,
+          items: [],
+        },
+
+        {
           title: 'Billing',
           href: '/dashboard/billing',
           icon: 'creditCard',

@@ -5,36 +5,76 @@ const f = createUploadthing()
 
 // FileRouter for your app, can contain multiple FileRoutes
 export const ourFileRouter = {
-  // Define as many FileRoutes as you like, each with a unique routeSlug
+  // Recipe images upload
   recipeUpload: f({
     image: {
-      /**
-       * For full list of options and defaults, see the File Route API reference
-       * @see https://docs.uploadthing.com/file-routes#route-config
-       */
       maxFileSize: '4MB',
-      maxFileCount: 3,
+      maxFileCount: 5,
     },
   })
-    // Set permissions and file types for this FileRoute
     .middleware(async () => {
-      // This code runs on your server before upload
       const user = await currentUser()
-
-      // If you throw, the user will not be able to upload
       if (!user) throw new Error('Unauthorized')
-
-      // Whatever is returned here is accessible in onUploadComplete as `metadata`
       return { userId: user.id }
     })
     .onUploadComplete(({ metadata, file }) => {
-      // This code RUNS ON YOUR SERVER after upload
-      console.log('Upload complete for userId:', metadata.userId)
+      console.log('Recipe image upload complete for userId:', metadata.userId)
+      console.log('file url', file.url)
+      return { uploadedBy: metadata.userId, url: file.url }
+    }),
 
-      console.log('file url', file.ufsUrl)
+  // Profile image upload
+  profileImage: f({
+    image: {
+      maxFileSize: '2MB',
+      maxFileCount: 1,
+    },
+  })
+    .middleware(async () => {
+      const user = await currentUser()
+      if (!user) throw new Error('Unauthorized')
+      return { userId: user.id }
+    })
+    .onUploadComplete(({ metadata, file }) => {
+      console.log('Profile image upload complete for userId:', metadata.userId)
+      console.log('file url', file.url)
+      return { uploadedBy: metadata.userId, url: file.url }
+    }),
 
-      // !!! Whatever is returned here is sent to the clientside `onClientUploadComplete` callback
-      return { uploadedBy: metadata.userId }
+  // Cookbook cover image
+  cookbookCover: f({
+    image: {
+      maxFileSize: '3MB',
+      maxFileCount: 1,
+    },
+  })
+    .middleware(async () => {
+      const user = await currentUser()
+      if (!user) throw new Error('Unauthorized')
+      return { userId: user.id }
+    })
+    .onUploadComplete(({ metadata, file }) => {
+      console.log('Cookbook cover upload complete for userId:', metadata.userId)
+      console.log('file url', file.url)
+      return { uploadedBy: metadata.userId, url: file.url }
+    }),
+
+  // Review images
+  reviewImages: f({
+    image: {
+      maxFileSize: '2MB',
+      maxFileCount: 3,
+    },
+  })
+    .middleware(async () => {
+      const user = await currentUser()
+      if (!user) throw new Error('Unauthorized')
+      return { userId: user.id }
+    })
+    .onUploadComplete(({ metadata, file }) => {
+      console.log('Review image upload complete for userId:', metadata.userId)
+      console.log('file url', file.url)
+      return { uploadedBy: metadata.userId, url: file.url }
     }),
 } satisfies FileRouter
 

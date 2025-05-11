@@ -23,6 +23,32 @@ export function SidebarNav({ items }: SidebarNavProps) {
         const LucideIcon =
           Icons[item.icon as keyof typeof Icons] || CircleDashed
 
+        // Common styling for the item
+        const itemClassName = cn(
+          'group flex w-full items-center rounded-md border border-transparent px-2 py-1',
+          item.href?.includes(String(segment))
+            ? 'bg-muted text-foreground font-medium'
+            : 'text-muted-foreground',
+          item.disabled
+            ? 'opacity-60 cursor-not-allowed bg-muted/50'
+            : 'hover:bg-muted hover:text-foreground',
+        )
+
+        // If item is disabled, render a div instead of a link
+        if (item.disabled) {
+          return (
+            <div
+              key={item.title}
+              className={itemClassName}
+              title={item.disabled ? 'This option is currently unavailable' : undefined}
+            >
+              <LucideIcon className='mr-2 size-5' />
+              <span>{item.title}</span>
+            </div>
+          )
+        }
+
+        // Otherwise render a normal link
         return item.href ? (
           <Link
             aria-label={item.title}
@@ -31,15 +57,7 @@ export function SidebarNav({ items }: SidebarNavProps) {
             target={item.external ? '_blank' : ''}
             rel={item.external ? 'noreferrer' : ''}
           >
-            <span
-              className={cn(
-                'group hover:bg-muted hover:text-foreground flex w-full items-center rounded-md border border-transparent px-2 py-1',
-                item.href.includes(String(segment))
-                  ? 'bg-muted text-foreground font-medium'
-                  : 'text-muted-foreground',
-                item.disabled && 'pointer-events-none opacity-60',
-              )}
-            >
+            <span className={itemClassName}>
               <LucideIcon className='mr-2 size-5' />
               <span>{item.title}</span>
             </span>

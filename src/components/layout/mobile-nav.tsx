@@ -19,6 +19,7 @@ import { ScrollArea } from '@/components/ui/scroll-area'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 
 import { DialogTitle } from '../ui/dialog'
+import Image from 'next/image'
 
 interface MobileNavProps {
   mainNavItems?: MainNavItem[]
@@ -49,7 +50,7 @@ export function MobileNav({ mainNavItems, dashboardItem }: MobileNavProps) {
             className='flex items-center'
             onClick={() => setIsOpen(false)}
           >
-            <Pizza className='mr-2 size-[1.15rem]' aria-hidden='true' />
+            <Image src='/logo.png' alt='Logo' width={32} height={32} className='h-8 w-8 rounded-full mr-1' />
             <DialogTitle className='text-lg font-bold'>
               {siteConfig.name}
             </DialogTitle>
