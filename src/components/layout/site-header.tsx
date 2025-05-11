@@ -23,6 +23,7 @@ import {
 
 import Combobox from '../combobox'
 import { SavedRecipesIcon } from '../saved-recipes-icon'
+import { ThemeSwitch } from '../theme-switch'
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
 import { Button, buttonVariants } from '../ui/button'
 import { MainNav } from './main-nav'
@@ -48,10 +49,10 @@ const SiteHeader: FC<SiteHeaderProps> = ({ user }) => {
           mainNavItems={siteConfig.MainNavItem}
           dashboardItem={dashboardConfig.sidebarNav}
         />
-        <div className='flex flex-1 items-center justify-end space-x-4'>
-          <nav className='flex items-center space-x-2'>
+        <div className='flex flex-1 items-center justify-end space-x-4'>          <nav className='flex items-center space-x-2'>
             <Combobox />
             <SavedRecipesIcon />
+            <ThemeSwitch />
             {user ? (
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
