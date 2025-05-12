@@ -6,22 +6,22 @@
 
 ## ✨ What is Tasty Trove?
 
-**Tasty Trove** is a modern, community-driven platform for discovering, uploading, and sharing recipes. Whether you're a home cook, a professional chef, or just looking for inspiration, Tasty Trove is your go-to destination for delicious ideas.
+**Tasty Trove** is a modern, community-driven platform for discovering, creating, and sharing recipes. Built with the latest technologies, it offers a seamless experience for food enthusiasts to explore culinary ideas, save their favorites, and contribute their own recipes to the community.
 
 ---
 
 ## 🚩 Features
 
-- 🥗 **Browse** a curated collection of recipes by category, difficulty, or prep time
-- 📤 **Upload** your own recipes with images, detailed steps, and ingredient lists
-- 💾 **Save** your favorite recipes and create your own collections
-- ⭐ **Review** and rate recipes from the community
-- 🌗 **Responsive** design with dark/light mode support
-- 📱 **Mobile-first** experience
-- 🔍 **Advanced search** with filters (diet, cook time, difficulty)
-- 🖼️ **Image uploads** for recipes
-- 🛡️ **Secure authentication** (Clerk)
-- 🗨️ **Community**: Connect via Discord and Twitter
+- 🥗 **Browse** recipes by category, difficulty, prep time, and more with advanced filtering
+- 📤 **Create** and publish your own recipes with step-by-step instructions and ingredient lists
+- 📚 **Organize** recipes in custom cookbooks that can be private or shared
+- 🖼️ **Upload** multiple images to showcase your culinary creations
+- 💾 **Save** recipes to your personal collection for quick access
+- 🔍 **Search** with powerful filters (difficulty, prep time, category)
+- 📱 **Responsive** design with full mobile support
+- 🌗 **Theme support** with light and dark modes
+- 👤 **User profiles** with customizable preferences
+- 👥 **Social features** including following other chefs
 
 ---
 
@@ -29,65 +29,74 @@
 
 ### Frontend
 
-- **Next.js 15** (App Router, Partial Prerendering)
-- **React 19**
-- **TypeScript**
-- **Tailwind CSS v4**
-- **shadcn/ui** & **Radix UI**
-- **Zod** (validation)
-- **Uploadthing** (image uploads)
+- **Next.js 15** (App Router with server components)
+- **React 19** (with React Server Components)
+- **TypeScript** (for type safety)
+- **Tailwind CSS v4** (for styling)
+- **shadcn/ui & Radix UI** (accessible component library)
+- **React Hook Form** (form handling)
+- **Zod** (schema validation)
+- **Embla Carousel** (for image carousels)
+- **Sonner** (toast notifications)
 
-### Backend
+### Backend & Data
 
-- **Drizzle ORM** (TypeScript-first SQL query builder)
-- **PostgreSQL** (relational database)
+- **Drizzle ORM** (type-safe query builder)
+- **PostgreSQL** (via Neon for serverless SQL)
+- **Uploadthing** (for image uploads and storage)
+- **Server Actions** (for data mutations)
 
 ### Auth & Deployment
 
-- **Clerk** (authentication)
-- **Vercel** (Edge Network, Serverless Functions)
+- **Clerk** (authentication and user management)
+- **Vercel** (deployment and hosting)
 
 ---
 
-## 📝 Recipe Submission Guidelines
+## 📝 Recipe Features
 
-- **Steps:** Use new lines or hyphens (`-`) to separate each step. You can make text bold with `**double asterisks**`.
-- **Ingredients:** List each ingredient with quantity and units (e.g., `2 cups of flour`).
-- **Images:** Upload up to 3 images per recipe.
-- **Need help?** See the [FAQs & Recipe Guide](https://tasty-trove-psi.vercel.app/faqs).
-
----
-
-## 🌟 Why Tasty Trove?
-
-- **Modern stack:** Next.js 15, Drizzle, PostgreSQL, Tailwind, shadcn/ui
-- **Type safety:** End-to-end types from DB to UI
-- **Beautiful UI:** Accessible, customizable, and responsive
-- **Community-first:** Built for sharing and discovery
+- **Detailed recipes:** Name, description, prep/cook/total time, difficulty, servings
+- **Categorization:** By meal type, cuisine, and difficulty level
+- **Step-by-step instructions:** With support for formatting (using `**bold**` for emphasis)
+- **Ingredient management:** With quantities and units
+- **Draft support:** Save works-in-progress before publishing
+- **Cookbook organization:** Group recipes into themed collections
+- **Image gallery:** Add up to 5 images per recipe
 
 ---
 
-## 📬 Feedback & Community
+## 🌟 Project Highlights
+
+- **Modern architecture:** Server components with partial rendering for optimal performance
+- **Type safety:** End-to-end type definitions from database to UI
+- **Component-driven:** Reusable, accessible UI components
+- **Feature-rich:** Cookbooks, saving, filtering, and more
+- **User-centric:** Designed for both recipe creators and browsers
+
+---
+
+## 📬 Community & Feedback
 
 - [Discord](https://discord.gg/Vv2bdC44Ge)
 - [Twitter](https://twitter.com/CodeMeAPixel)
-- [GitHub Issues](https://github.com/CodeMeAPixel/tastytrove/issues)
+- [GitHub](https://github.com/CodeMeAPixel/TastyTrove)
 
 ---
 
 ## 👨‍💻 Credits
 
-Built by [Pixelated](https://codemeapixel.dev/) and ByteBrush Studios.
+Built by [ByteBrush Studios](https://codemeapixel.dev/) with ❤️ for cooking enthusiasts everywhere.
 
 ---
 
 ## 📅 Roadmap
 
-- [ ] Advanced search filters (cuisine, ingredients)
-- [ ] Email notifications for favorites & updates
-- [ ] More social/community features
-- [ ] Improved recipe analytics
+- [ ] Recipe reviews and ratings
+- [ ] Meal planning functionality
+- [ ] Shopping list generation from recipes
+- [ ] Enhanced social features and sharing
+- [ ] Recipe nutrition information
 
 ---
 
-Enjoy cooking and sharing with **Tasty Trove**! 🍲
+Enjoy exploring and sharing with **Tasty Trove**! 🍲

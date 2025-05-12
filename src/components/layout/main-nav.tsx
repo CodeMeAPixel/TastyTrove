@@ -55,7 +55,7 @@ export const MainNav: FC<MainNavProps> = ({ items }) => {
                           href={item.href}
                           disabled={item.disabled}
                         >
-                          {item.description} a
+                          {item.description}
                         </ListItem>
                       ))}
                     </ul>

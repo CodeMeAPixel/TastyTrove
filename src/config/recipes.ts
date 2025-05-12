@@ -71,7 +71,9 @@ export const servingsOptions = [
   { label: '1 serving', value: '1' },
   { label: '2 servings', value: '2' },
   { label: '4 servings', value: '4' },
+  { label: '5 servings', value: '5' },
   { label: '6 servings', value: '6' },
+  { label: '7 servings', value: '7' },
   { label: '8+ servings', value: '8' },
 ]
 

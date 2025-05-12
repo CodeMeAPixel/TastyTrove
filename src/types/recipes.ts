@@ -44,7 +44,7 @@ export enum Units {
   kilogram = 'kg',
   package = 'package',
   piece = 'piece',
-  pound = 'pond',
+  pound = 'pound(s)',
   pieces = 'pieces',
   millilitre = 'ml',
   litre = 'l',

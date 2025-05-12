@@ -50,46 +50,73 @@ export const siteConfig = {
 
   footerNav: [
     {
-      title: 'Inspiration',
+      title: 'Navigation',
       items: [
         {
-          title: 'Skateshop',
-          href: 'https://skateshop.sadmn.com',
-          external: true,
+          title: 'Home',
+          href: '/',
+          external: false,
         },
 
         {
-          title: 'Taxonomy',
-          href: 'https://tx.shadcn.com/',
-          external: true,
+          title: 'About Us',
+          href: '/about',
+          external: false,
         },
         {
-          title: 'shadcn/ui',
-          href: 'https://ui.shadcn.com',
-          external: true,
+          title: 'Blog Posts',
+          href: '/blog',
+          external: false,
         },
       ],
     },
-
     {
       title: 'Social',
       items: [
         {
           title: 'Twitter',
-          href: 'https://twitter.com/CodeMeAPixel',
+          href: 'https://twitter.com/TastyTroveApp',
           external: true,
         },
         {
           title: 'GitHub',
-          href: 'https://github.com/CodeMeAPixel',
+          href: 'https://github.com/TastyTroveApp',
           external: true,
         },
         {
-          title: 'LinkedIn',
-          href: 'https://www.linkedin.com/in/CodeMeAPixel',
+          title: 'Discord',
+          href: 'https://discord.gg/Vv2bdC44Ge',
           external: true,
         },
       ],
     },
+    {
+      title: 'Legal',
+      items: [
+        {
+          title: 'Terms of Service',
+          href: '/legal/terms',
+          external: false
+        },
+        {
+          title: 'Privacy Policy',
+          href: '/legal/privacy',
+          external: false
+        },
+        {
+          title: 'Use License',
+          href: '/legal/usage',
+          external: false
+        },
+      ]
+    }
   ],
+  emails: {
+    licensing: "licensing@tastytrove.ca",
+    contact: "hey@tastytrove.ca",
+    support: "support@tastytrove.ca",
+    careers: "join@tastytrove.ca",
+    legal: "legal@tastytrove.ca",
+    dpo: "dpo@tastytrove.ca"
+  }
 }
